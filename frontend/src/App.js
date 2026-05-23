@@ -31,7 +31,7 @@ function App() {
     setLoading(true);
     const loadingToast = toast.loading('Transforming for all learners...');
     try {
-      const res = await axios.post('http://localhost:5000/api/transform', { text: inputText });
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/transform`, { text: inputText });
       setResults(res.data);
       toast.dismiss(loadingToast);
       toast.success('Transformed into 4 learning modes!');

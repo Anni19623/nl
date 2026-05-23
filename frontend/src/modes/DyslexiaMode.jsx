@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const BG_OPTIONS = [
   { label: 'Cream', value: '#FDFAF3' },
